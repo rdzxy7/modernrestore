@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Cabeçalho Gamer</title>
+</head>
+<body>
+
+<!-- ====== HTML ====== -->
+<header>
+  <!-- Logo -->
+  <div class="logo">
+    <img src="img/Logo modern.png" alt="Logo do site">
+  </div>
+
+  <!-- Menu central -->
+  <nav class="menu">
+    <a href="#">Promoções</a>
+    <a href="#">PC Gamer</a>
+    <a href="#">Hardware</a>
+    <a href="#">Monitores</a>
+  </nav>
+
+  <!-- Barra de pesquisa -->
+  <div class="search-bar">
+    <input type="text" placeholder="Pesquisar...">
+    <button>🔍</button>
+  </div>
+
+  <!-- Ícones e login -->
+  <div class="icons">
+    <span>🛒</span>
+    <span>❤️</span>
+    <button id="darkModeToggle">🌙</button>
+    <span class="login">
+      <img src="img/boneco login (2).png" alt="Usuário">
+      Login
+    </span>
+  </div>
+</header>
+
+<!-- ====== JavaScript ====== -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('darkModeToggle');
+
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      // Alterna ícone entre Lua 🌙 e Sol ☀️
+      toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    });
+  }
+});
+</script>
+
+</body>
+</html>

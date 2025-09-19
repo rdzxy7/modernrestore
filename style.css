@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+  background: #fff;
+  color: #000;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #ff0000, #000000);
+  color: white;
+  padding: 0 30px;
+  height: 100px;
+  box-sizing: border-box;
+  transition: background 0.3s;
+}
+
+/* Logo */
+.logo img {
+  height: 80px; /* logo maior no desktop */
+  width: auto;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 25px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.menu a:hover {
+  color: #ffd700;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-bar input {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+}
+
+/* Ícones e login */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icons span:hover,
+.icons button:hover {
+  color: #ffd700;
+}
+
+/* Login com ícone */
+.login {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.login img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Modo escuro */
+body.dark {
+  background: #111;
+  color: white;
+}
+
+body.dark header {
+  background: linear-gradient(90deg, #550000, #111);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 20px;
+  }
+  .logo img {
+    height: 50px; /* menor em telas pequenas */
+  }
+  .menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .search-bar {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  .icons {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
